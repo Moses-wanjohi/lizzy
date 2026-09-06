@@ -14,9 +14,9 @@ const Footer = () => {
         <div>
           <h5 className="text-white uppercase tracking-widest font-semibold mb-4">Navigation</h5>
           <ul className="space-y-2">
-            <li><Link to="/shop" className="hover:text-[#D4AF37] cursor-pointer">Shop All</Link></li>
             <li><Link to="/collections" className="hover:text-[#D4AF37] cursor-pointer">Collections</Link></li>
-            <li><Link to="/archive" className="hover:text-[#D4AF37] cursor-pointer">Archive</Link></li>
+            <li><Link to="/sellers" className="hover:text-[#D4AF37] cursor-pointer">Sellers</Link></li>
+            <li><Link to="/about" className="hover:text-[#D4AF37] cursor-pointer">About</Link></li>
           </ul>
         </div>
         

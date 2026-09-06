@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
-import ShopPage from './pages/ShopPage';
 import CollectionsPage from './pages/CollectionsPage';
 import SellersPage from './pages/SellersPage';
 import AboutPage from './pages/AboutPage';
@@ -12,8 +11,10 @@ import { CartProvider } from './context/CartContext';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import CartPage from './pages/CartPage';
+import { ProductProvider } from './context/ProductContext';
 const App = () => {
   return (
+    <ProductProvider>
     <CartProvider>
       <Router>
         <div className="min-h-screen flex flex-col bg-black text-white font-sans selection:bg-[#D4AF37] selection:text-black">
@@ -21,7 +22,6 @@ const App = () => {
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/shop" element={<ShopPage />} />
               <Route path="/collections" element={<CollectionsPage />} />
               <Route path="/sellers" element={<SellersPage />} />
               <Route path="/about" element={<AboutPage />} />
@@ -35,6 +35,7 @@ const App = () => {
         </div>
       </Router>
     </CartProvider>
+    </ProductProvider>
   );
 };
 
